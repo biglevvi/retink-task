@@ -40,16 +40,18 @@ import "@fontsource/poppins";
 
 function App() {
   return (
-    <>
-      <Stack align='center' w='full' maxW='1440px'>
+    <Box overflowX='hidden'>
+      <Stack align='center' maxW='1440px'>
         <Flex w='full' px={["5", "5", "28"]} pos='relative' pb='28'>
           <Stack spacing='7' pt={10} w={["full", "full", "620px"]}>
             <Image src={logo} w='170px' />
             <Flex
+              // w='full'
               align='end'
               pt='10'
               pb='4'
-              fontSize={["30px", "30px", "40px"]}>
+              fontSize={["30px", "30px", "40px"]}
+              flexWrap='wrap'>
               <Stack>
                 <Heading size='lg' fontWeight={800} fontSize='inherit'>
                   Get Advanced AI{" "}
@@ -163,7 +165,12 @@ function App() {
           />
         </Flex>
 
-        <Stack bgColor='white' w='full' pt='5' align='center'>
+        <Stack
+          bgColor='white'
+          w='full'
+          pt='5'
+          align='center'
+          px={["3", "3", "0"]}>
           <Heading
             textAlign='center'
             fontSize='28px'
@@ -173,7 +180,8 @@ function App() {
           </Heading>
           <Image src={explainerVideo} w='737px' />
           <Grid
-            p='20'
+            w='full'
+            p={["3", "5", "20"]}
             gridTemplateColumns='repeat(auto-fill,minmax(300px,1fr))'
             gridAutoRows='350px'
             gridColumnGap='10'
@@ -216,6 +224,7 @@ function App() {
             fontSize='20px'
             textAlign='center'
             w={["full", "full", "800px"]}
+            px={["2", "2", "0"]}
             lineHeight='170%'>
             With a new approach toordering content, you can now stop juggling
             multiple documents and meetings and start publishing content faster
@@ -228,6 +237,7 @@ function App() {
             fontSize='20px'
             w={["full", "full", "800px"]}
             textAlign='center'
+            px={["2", "2", "0"]}
             lineHeight='170%'>
             Save time and maintain your brand identity within your budget range
             or sign up for affordable plans and still access multiple content
@@ -235,6 +245,7 @@ function App() {
           </Text>
 
           <Grid
+            w='full'
             maxW='1000px'
             p='10'
             gridTemplateColumns='repeat(3,1fr)'
@@ -329,6 +340,7 @@ function App() {
               color='#0085FF'
               variant='outline'
               fontSize='18px'
+              w='full'
               h='58px'
               px='20'>
               Sign up as a freelance partner
@@ -405,7 +417,7 @@ function App() {
           </Text>
         </HStack>
       </Flex>
-    </>
+    </Box>
   );
 }
 
